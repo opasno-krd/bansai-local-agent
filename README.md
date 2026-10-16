@@ -41,17 +41,17 @@
    
 ### Работа с памятью (если агент сам не сделал записей)  
 
-- **Записать урок
+- Записать урок
   ```powershell
    py -3 C:\workspace\mem.py write --cat gotcha --task "название" --broke "симптом" --fixed "решение"
    ```
   
-- **Прочитать урок
+- Прочитать урок
   ```powershell
    py -3 C:\workspace\mem.py read <id>
    ```
   
-- **Поиск по урокам
+- Поиск по урокам
   ```powershell
    py -3 C:\workspace\mem.py search "ключевое слово"
    ```

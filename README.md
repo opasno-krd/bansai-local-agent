@@ -13,7 +13,7 @@
 
 ### Установка за 5 минут
 
-**Перед установкой единожды запусти DeepSeek Harnees, чтобы он создал файлы и прописал пути**
+**Перед установкой единожды запусти DeepSeek Harness, чтобы он создал файлы и прописал пути**
 
 1. **Скачай или склонируй этот репозиторий** в удобное место, например: `C:\bansai-local-agent`
 
@@ -39,10 +39,16 @@
 ### Работа с памятью (если агент сам не сделал записей)  
 
 - **Записать урок
-py -3 C:\workspace\mem.py write --cat gotcha --task "название" --broke "симптом" --fixed "решение"
-
+  ```powershell
+   py -3 C:\workspace\mem.py write --cat gotcha --task "название" --broke "симптом" --fixed "решение"
+   ```
+  
 - **Прочитать урок
-py -3 C:\workspace\mem.py read <id>
-
+  ```powershell
+   py -3 C:\workspace\mem.py read <id>
+   ```
+  
 - **Поиск по урокам
-py -3 C:\workspace\mem.py search "ключевое слово"
+  ```powershell
+   py -3 C:\workspace\mem.py search "ключевое слово"
+   ```

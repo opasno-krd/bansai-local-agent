@@ -26,8 +26,11 @@
    ```powershell
    Copy-Item C:\workspace\cordis.patch.yml "$env:USERPROFILE\.dsh\profiles\desktop\cordis.patch.yml"
    ```
-4. **Отредактируй путь к модели в файле C:\workspace\start-server.ps1:**
-   Найди строку Set-Location 'C:\AI\bonsai\Bonsai-demo' и замени её на реальный путь к папке, где лежит твой .gguf файл.
+4. **Укажи, где лежит модель (выбери любой из трёх удобных способов):**
+- Способ А (рекомендуемый): Скопируй файл `bonsai.config.json.example` в `bonsai.config.json` и поменяй путь в нём на свой.
+- Способ Б: Задай переменную окружения перед запуском: `$env:BONSAI_MODEL_DIR = 'D:\твоя\папка'`
+- Способ В: Просто положи модель в папку по умолчанию: `C:\AI\bonsai\Bonsai-demo`
+Скрипт автоматически проверит путь и выдаст понятную ошибку, если модель не найдена.
 
 5. **Запусти сервер:**
    ```powershell

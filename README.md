@@ -52,3 +52,4 @@
   ```powershell
    py -3 C:\workspace\mem.py search "ключевое слово"
    ```
+  **Доступные категории: `project`, `preference`, `gotcha`, `decision`, `todo`.**

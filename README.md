@@ -19,7 +19,7 @@
 
 2. **Запусти скрипт развёртывания:**
    ```powershell
-   cd C:\bonsai
+   cd C:\bansai-local-agent
    .\setup-workspace.ps1
    ```
 3. **Скопируй профиль конфигурации в папку профиля Harness:**

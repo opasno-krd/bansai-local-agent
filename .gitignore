@@ -1,0 +1,15 @@
+# Runtime data - unique to each user
+.dsh/
+tasks/
+
+# Temporary files
+*.tmp
+*.log
+__pycache__/
+*.pyc
+
+# User-specific notes
+my-world/notes/
+
+# Model files (too large)
+*.gguf

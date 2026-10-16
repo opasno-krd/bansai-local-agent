@@ -10,6 +10,15 @@ At the end of a significant task, record a lesson via:
 
 NEVER edit `.dsh/mem/index.json` by hand. Use `mem.py` exclusively.
 
+## 🚨 Recovery Protocol (Token/Context Limits)
+If you approach context limits, experience an output cut-off, or the session becomes unstable:
+1. IMMEDIATELY save your current state before stopping:
+   `py -3 C:\workspace\mem.py write --cat todo --task "Resume: <brief task name>" --broke "Session interrupted/token limit" --fixed "State saved at step X, ready to resume in new chat"`
+2. Output exactly this marker and STOP: `[CHECKPOINT SAVED: <lesson_id>]`
+3. When the user starts a new chat with "Resume task <lesson_id>", you MUST immediately run:
+   `py -3 C:\workspace\mem.py read <lesson_id>`
+   and continue the work exactly from the saved state, without asking for the task description again.
+
 ## Task Workspace Convention
 For any non-trivial task (scripts, analysis, multi-file work):
 1. Create a task folder: `tasks/<YYYY-MM-DD>_<short_topic>/`

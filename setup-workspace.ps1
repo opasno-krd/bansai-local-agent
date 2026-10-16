@@ -25,27 +25,17 @@ Copy-Item "$scriptDir\mem.py" "$workspaceRoot\mem.py" -Force
 Copy-Item "$scriptDir\start-server.ps1" "$workspaceRoot\start-server.ps1" -Force
 Write-Host "  ✓ Configuration files copied" -ForegroundColor Green
 
-# 3. Копируем production-скрипты
-Write-Host "[3/5] Copying production scripts..." -ForegroundColor Yellow
-if (Test-Path "$scriptDir\clean_logs.sh") {
-    Copy-Item "$scriptDir\clean_logs.sh" "$workspaceRoot\clean_logs.sh" -Force
-}
-if (Test-Path "$scriptDir\ssh_stats.sh") {
-    Copy-Item "$scriptDir\ssh_stats.sh" "$workspaceRoot\ssh_stats.sh" -Force
-}
-Write-Host "  ✓ Production scripts copied" -ForegroundColor Green
-
-# 4. Копируем документацию
+# 3. Копируем документацию
 Write-Host "[4/5] Copying documentation..." -ForegroundColor Yellow
 if (Test-Path "$scriptDir\plugin_docs.md") {
     Copy-Item "$scriptDir\plugin_docs.md" "$workspaceRoot\plugin_docs.md" -Force
 }
-if (Test-Path "$scriptDir\README-setup.md") {
-    Copy-Item "$scriptDir\README-setup.md" "$workspaceRoot\README-setup.md" -Force
+if (Test-Path "$scriptDir\README.md") {
+    Copy-Item "$scriptDir\README.md" "$workspaceRoot\README.md" -Force
 }
 Write-Host "  ✓ Documentation copied" -ForegroundColor Green
 
-# 5. Инициализируем память
+# 4. Инициализируем память
 Write-Host "[5/5] Initializing lesson memory..." -ForegroundColor Yellow
 try {
     $memResult = py -3 "$workspaceRoot\mem.py" write --cat decision --task "workspace setup" --broke "fresh install" --fixed "workspace deployed via setup script" 2>&1
